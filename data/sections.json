@@ -1,0 +1,35 @@
+[
+    {
+        "key": "1",
+        "id": "home",
+        "title": "Andrea Battista",
+        "description": "Full-stack developer",
+        "mainButtonLabel": "Who am I",
+        "mainButtonLink": "#about",
+        "otherButtonLabel": "Project",
+        "otherButtonLink": "#projects",
+        "imageSrc": "./src/assets/home.PNG"
+    },
+    {
+        "key": "2",
+        "id": "about",
+        "title": "About me",
+        "description": "Full-stack developer",
+        "mainButtonLabel": "Projects",
+        "mainButtonLink": "#projects",
+        "otherButtonLabel": "Contact",
+        "otherButtonLink": "#contact",
+        "imageSrc": ""
+    },
+    {
+        "key": "3",
+        "id": "projects",
+        "title": "Projects",
+        "description": "Full-stack developer",
+        "mainButtonLabel": "Contact",
+        "mainButtonLink": "#contact",
+        "otherButtonLabel": "Who am I",
+        "otherButtonLink": "#about",
+        "imageSrc": ""
+    }
+]
