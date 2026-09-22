@@ -19,7 +19,7 @@ export default function App() {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        fetch("./public/data/sections.json")
+        fetch("./portfolio/public/data/sections.json")
             .then((response) => response.json())
             .then((data) => setData(data))
             .catch((error) => console.error("Error fetching data:", error));
