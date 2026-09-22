@@ -12,7 +12,7 @@ export default function Navbar() {
                 gap={8}
                 bg="#fff"
                 align="center"
-                justify="center"
+                justify={{base: "space-between", md: "center"}}
                 wrap="wrap"
                 px={{ base: 6, lg: 12 }}
                 py={3}

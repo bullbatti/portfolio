@@ -35,11 +35,11 @@ export default function App() {
             <Stack gap={4}>
                 {data.map((section: Prop) => (
                     <Section
-                    key={section.key}
-                    id={section.id}
-                    title={section.title}
-                    description={section.description}
-                    isProjectsSection={section.key === "3"}
+                        key={section.key}
+                        id={section.id}
+                        title={section.title}
+                        description={section.description}
+                        isProjectsSection={section.key === "3"}
                         mainButtonLabel={section.mainButtonLabel}
                         mainButtonLink={section.mainButtonLink}
                         otherButtonLabel={section.otherButtonLabel}
