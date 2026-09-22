@@ -19,7 +19,7 @@ export default function App() {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        fetch("./portfolio/public/data/sections.json")
+        fetch(`${import.meta.env.BASE_URL}/data/sections.json`)
             .then((response) => response.json())
             .then((data) => setData(data))
             .catch((error) => console.error("Error fetching data:", error));
@@ -43,7 +43,7 @@ export default function App() {
                         mainButtonLink={section.mainButtonLink}
                         otherButtonLabel={section.otherButtonLabel}
                         otherButtonLink={section.otherButtonLink}
-                        imageSrc={section.imageSrc}
+                        imageSrc={`${import.meta.env.BASE_URL}${section.imageSrc}`}
                     />
                 ))}
 

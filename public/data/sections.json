@@ -8,7 +8,7 @@
         "mainButtonLink": "#about",
         "otherButtonLabel": "Project",
         "otherButtonLink": "#projects",
-        "imageSrc": "./portfolio/src/assets/home.PNG"
+        "imageSrc": "/src/assets/home.png"
     },
     {
         "key": "2",
