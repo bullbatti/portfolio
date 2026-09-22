@@ -1,4 +1,5 @@
-import { Stack, Link } from "@chakra-ui/react";
+import { Github, Linkedin } from "@boxicons/react";
+import { Stack, Link, Box } from "@chakra-ui/react";
 
 const links = [
     { name: "Home", href: "#home" },
@@ -14,10 +15,10 @@ type Props = {
 export default function MenuLinks({ isMobile }: Props) {
     return (
         <Stack
-        marginTop={isMobile ? "8" : "0"}
+            marginTop={isMobile ? "8" : "0"}
             direction={isMobile ? "column" : "row"}
-            alignItems={isMobile ? "flex-end": "flex-start"}
-            gap={8}  
+            alignItems={isMobile ? "flex-end" : "flex-start"}
+            gap={8}
         >
             {links.map((link) => (
                 <Link
@@ -25,15 +26,32 @@ export default function MenuLinks({ isMobile }: Props) {
                     href={link.href}
                     fontWeight={isMobile ? "bold" : "medium"}
                     fontSize={isMobile ? "4xl" : "md"}
-                    
-                    _hover={{
-                        textDecoration: "underline",
-                    }}
-                    transition="color 0.2s ease"
                 >
                     {link.name}
                 </Link>
             ))}
+
+            <Box>
+                <Link
+                    href="https://github.com/bullbatti"
+                    target="_blank"
+                    display="flex"
+                    alignItems="center"
+                >
+                    <Github />
+                </Link>
+            </Box>
+
+            <Box>
+                <Link
+                    href="https://it.linkedin.com/in/battista-andrea"
+                    target="_blank"
+                    display="flex"
+                    alignItems="center"
+                >
+                    <Linkedin />
+                </Link>
+            </Box>
         </Stack>
     );
 }

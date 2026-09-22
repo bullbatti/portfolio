@@ -1,4 +1,4 @@
-import { Flex, Box, Text } from "@chakra-ui/react";
+import { Flex, Box, Image, Link } from "@chakra-ui/react";
 import MenuLinks from "./MenuLinks";
 import MobileDrawer from "./MobileDrawer";
 
@@ -9,12 +9,11 @@ export default function Navbar() {
                 width="100%" bg="#fff">
             <Flex
                 as="nav"
-                
+                gap={8}
                 bg="#fff"
                 align="center"
-                justify="space-between"
+                justify="center"
                 wrap="wrap"
-                gap={{ base: 8, lg: 16 }}
                 px={{ base: 6, lg: 12 }}
                 py={3}
                 maxW={{ base: "full", xl: "1440px" }}
@@ -22,9 +21,9 @@ export default function Navbar() {
                 
             >
                 <Box>
-                    <Text fontSize="lg" fontWeight="bold">
-                        Andrea Battista
-                    </Text>
+                    <Link href="" display="flex" alignItems="center">
+                        <Image src={`${import.meta.env.BASE_URL}/logo.png`} width="25px"></Image>
+                    </Link>
                 </Box>
 
                 {/* Desktop Menu */}
