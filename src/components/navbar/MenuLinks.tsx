@@ -1,5 +1,5 @@
 import { Github, Linkedin } from "@boxicons/react";
-import { Stack, Link, Box } from "@chakra-ui/react";
+import { Stack, Link, HStack } from "@chakra-ui/react";
 
 const links = [
     { name: "Home", href: "#home" },
@@ -31,7 +31,7 @@ export default function MenuLinks({ isMobile }: Props) {
                 </Link>
             ))}
 
-            <Box>
+            <HStack gap={{base: "0", md: "8"}}>
                 <Link
                     href="https://github.com/bullbatti"
                     target="_blank"
@@ -40,9 +40,7 @@ export default function MenuLinks({ isMobile }: Props) {
                 >
                     <Github />
                 </Link>
-            </Box>
 
-            <Box>
                 <Link
                     href="https://it.linkedin.com/in/battista-andrea"
                     target="_blank"
@@ -51,7 +49,7 @@ export default function MenuLinks({ isMobile }: Props) {
                 >
                     <Linkedin />
                 </Link>
-            </Box>
+            </HStack>
         </Stack>
     );
 }

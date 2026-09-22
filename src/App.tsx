@@ -47,10 +47,6 @@ export default function App() {
                         imageSrc={`${import.meta.env.BASE_URL}${section.imageSrc}`}
                     />
                 ))}
-
-                {/* <Section id='about' title='Andrea Battista' description='Full-stack web developer' imageSrc='src/assets/hero.png' />
-      <Section id='projects' title='Andrea Battista' description='Full-stack web developer' imageSrc='src/assets/hero.png' />
-      <Section id='contact' title='Andrea Battista' description='Full-stack web developer' imageSrc='src/assets/hero.png' /> */}
             </Stack>
         </>
     );
