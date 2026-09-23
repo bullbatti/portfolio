@@ -26,19 +26,21 @@ export default function MenuLinks({ isMobile }: Props) {
                     href={link.href}
                     fontWeight={isMobile ? "bold" : "medium"}
                     fontSize={isMobile ? "4xl" : "md"}
+                    outline="none"
+                    focusRing="none"
                 >
                     {link.name}
                 </Link>
             ))}
 
-            <HStack gap={{base: "0", md: "8"}}>
+            <HStack gap={{ base: "4", md: "8" }}>
                 <Link
                     href="https://github.com/bullbatti"
                     target="_blank"
                     display="flex"
                     alignItems="center"
                 >
-                    <Github />
+                    <Github size={isMobile ? "lg" : undefined} />
                 </Link>
 
                 <Link
@@ -47,7 +49,7 @@ export default function MenuLinks({ isMobile }: Props) {
                     display="flex"
                     alignItems="center"
                 >
-                    <Linkedin />
+                    <Linkedin size={isMobile ? "lg" : undefined} />
                 </Link>
             </HStack>
         </Stack>

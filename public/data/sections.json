@@ -6,7 +6,7 @@
         "description": "Full Stack Developer",
         "mainButtonLabel": "Who am I",
         "mainButtonLink": "#about",
-        "otherButtonLabel": "Project",
+        "otherButtonLabel": "Projects",
         "otherButtonLink": "#projects",
         "imageSrc": "/assets/home.png"
     },
@@ -19,7 +19,7 @@
         "mainButtonLink": "#projects",
         "otherButtonLabel": "Contact",
         "otherButtonLink": "#contact",
-        "imageSrc": ""
+        "imageSrc": "/assets/about.png"
     },
     {
         "key": "3",

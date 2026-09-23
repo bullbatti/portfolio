@@ -12,7 +12,6 @@ import {
     Skeleton,
     Badge,
     VStack,
-    Spacer,
 } from "@chakra-ui/react";
 
 type Prop = {
@@ -33,7 +32,7 @@ export default function Section(prop: Prop) {
         <AspectRatio
             id={prop.id}
             bg="bg.muted"
-            ratio={{ base: 9 / 16, md: 21 / 9 }}
+            ratio={{ base: 9 / 16, md: 4 / 3, xl: 21 / 9 }}
             width="100%"
         >
             <Box width="100%" height="100%" position="relative">
@@ -41,7 +40,9 @@ export default function Section(prop: Prop) {
                     direction="column"
                     position="absolute"
                     inset={0}
-                    padding={6}
+                    paddingX={6}
+                    paddingY={9}
+                    gap={4}
                     height="100%"
                     width="100%"
                     overflow="hidden"
@@ -54,30 +55,36 @@ export default function Section(prop: Prop) {
                         flexShrink={0}
                     >
                         <Text
-                            fontSize={{ base: "3xl", md: "4xl", lg: "6xl" }}
+                            fontSize={{ base: "4xl", md: "5xl", lg: "6xl" }}
                             fontWeight="bold"
                             lineHeight="short"
                         >
                             {prop.title}
                         </Text>
-                        <Text fontSize={{ base: "lg", md: "xl", lg: "3xl" }}>
+                        <Text fontSize={{ base: "lg", md: "2xl", lg: "3xl" }}>
                             {prop.description}
                         </Text>
                         <HStack marginTop={2}>
-                            <Button colorPalette="blue" variant="solid">
+                            <Button
+                                colorPalette="blue"
+                                variant="solid"
+                                borderRadius={99}
+                            >
                                 <Link href={prop.mainButtonLink} color="white">
                                     {prop.mainButtonLabel}
                                 </Link>
                             </Button>
-                            <Button colorPalette="blue" variant="outline">
+                            <Button
+                                colorPalette="blue"
+                                variant="outline"
+                                borderRadius={99}
+                            >
                                 <Link href={prop.otherButtonLink}>
                                     {prop.otherButtonLabel}
                                 </Link>
                             </Button>
                         </HStack>
                     </VStack>
-
-                    <Spacer />
 
                     <Box
                         width="100%"
@@ -101,7 +108,12 @@ export default function Section(prop: Prop) {
 
                         {/* Badge + Marquee per la sezione progetti */}
                         {prop.isProjectsSection && (
-                            <VStack width="100%" align="center" gap={4}>
+                            <VStack
+                                width="100%"
+                                align="center"
+                                gap={4}
+                                marginTop={8}
+                            >
                                 <Badge
                                     variant="solid"
                                     colorPalette="yellow"
