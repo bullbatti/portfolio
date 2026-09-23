@@ -5,9 +5,9 @@
         "title": "Andrea Battista",
         "description": "Full Stack Developer",
         "mainButtonLabel": "Who am I",
-        "mainButtonLink": "#about",
+        "mainButtonLink": "/portfolio/about",
         "otherButtonLabel": "Projects",
-        "otherButtonLink": "#projects",
+        "otherButtonLink": "/portfolio/projects",
         "imageSrc": "/assets/home.png"
     },
     {
@@ -15,10 +15,10 @@
         "id": "about",
         "title": "About me",
         "description": "Chaos. Coffee. Code.",
-        "mainButtonLabel": "Projects",
-        "mainButtonLink": "#projects",
-        "otherButtonLabel": "Contact",
-        "otherButtonLink": "#contact",
+        "mainButtonLabel": "Learn more",
+        "mainButtonLink": "/portfolio/about",
+        "otherButtonLabel": "My journey",
+        "otherButtonLink": "/portfolio/about/#my-journey",
         "imageSrc": "/assets/about.png"
     },
     {

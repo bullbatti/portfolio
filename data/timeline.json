@@ -1,0 +1,23 @@
+[
+    {
+        "key": "1",
+        "icon": "education",
+        "title": "IFTS",
+        "date": "11/2023 - 07/2024",
+        "description": "Software Engineer for the Design and Prototyping of Web Applications"
+    },
+    {
+        "key": "2",
+        "icon": "briefcase",
+        "title": "Full Stack Developer",
+        "date": "10/2024 - 12/2024",
+        "description": "Spring Boot and Angular E-Commerce"
+    },
+    {
+        "key": "3",
+        "icon": "code-alt",
+        "title": "Full Stack Developer",
+        "date": "2025",
+        "description": ".NET MVC, .NET Blazor, React"
+    }
+]
