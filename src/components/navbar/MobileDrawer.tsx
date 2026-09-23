@@ -17,7 +17,7 @@ export default function MobileDrawer() {
                         <Drawer.Header>
                             <Drawer.Title></Drawer.Title>
                         </Drawer.Header>
-                        <Drawer.Body>
+                        <Drawer.Body onClick={onToggle}>
                             <MenuLinks isMobile={true} />
                         </Drawer.Body>
                         <Drawer.CloseTrigger asChild>
