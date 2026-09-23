@@ -2,9 +2,9 @@ import { Github, Linkedin } from "@boxicons/react";
 import { Stack, Link, HStack } from "@chakra-ui/react";
 
 const links = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Projects", href: "#projects" },
+    { name: "Home", href: "/portfolio" },
+    { name: "About", href: "/portfolio/about" },
+    { name: "Projects", href: "/portfolio/projects" },
     { name: "Contact", href: "#contact" },
 ];
 

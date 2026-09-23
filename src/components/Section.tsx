@@ -1,18 +1,15 @@
 import { AlertTriangle } from "@boxicons/react";
 import {
     AspectRatio,
-    Text,
     Image,
     Box,
     Flex,
-    Button,
-    Link,
-    HStack,
     Marquee,
     Skeleton,
     Badge,
     VStack,
 } from "@chakra-ui/react";
+import SectionTitle from "./SectionTitle";
 
 type Prop = {
     key: string;
@@ -47,43 +44,16 @@ export default function Section(prop: Prop) {
                     width="100%"
                     overflow="hidden"
                 >
-                    <VStack
-                        width="100%"
-                        align="center"
-                        textAlign="center"
-                        gap={2}
-                        flexShrink={0}
-                    >
-                        <Text
-                            fontSize={{ base: "4xl", md: "5xl", lg: "6xl" }}
-                            fontWeight="bold"
-                            lineHeight="short"
-                        >
-                            {prop.title}
-                        </Text>
-                        <Text fontSize={{ base: "lg", md: "2xl", lg: "3xl" }}>
-                            {prop.description}
-                        </Text>
-                        <HStack marginTop={2}>
-                            <Button
-                                colorPalette="blue"
-                                variant="solid"
-                                borderRadius={99}
-                            >
-                                <Link href={prop.mainButtonLink} color="white">
-                                    {prop.mainButtonLabel}
-                                </Link>
-                            </Button>
-                            <Button
-                                colorPalette="blue"
-                                variant="outline"
-                                borderRadius={99}
-                            >
-                                <Link href={prop.otherButtonLink}>
-                                    {prop.otherButtonLabel}
-                                </Link>
-                            </Button>
-                        </HStack>
+                    <VStack width="100%" align="center" gap={2} flexShrink={0}>
+                        <SectionTitle
+                        key={prop.key}
+                            title={prop.title}
+                            description={prop.description}
+                            mainButtonLabel={prop.mainButtonLabel}
+                            mainButtonLink={prop.mainButtonLink}
+                            otherButtonLabel={prop.otherButtonLabel}
+                            otherButtonLink={prop.otherButtonLink}
+                        />
                     </VStack>
 
                     <Box

@@ -1,5 +1,5 @@
 import { Stack } from "@chakra-ui/react";
-import Navbar from "./components/navbar/Navbar";
+
 import Section from "./components/Section";
 import { useEffect, useState } from "react";
 
@@ -31,7 +31,6 @@ export default function App() {
 
     return (
         <>
-            <Navbar />
             <Stack gap={4}>
                 {data.map((section: Prop) => (
                     <Section

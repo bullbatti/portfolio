@@ -25,7 +25,7 @@ export default function Navbar() {
                 mx="auto"
             >
                 <Box>
-                    <Link href="" display="flex" alignItems="center">
+                    <Link href="/portfolio#home" style={{display: "flex", alignItems: "center"}} >
                         <Image
                             src={`${import.meta.env.BASE_URL}/logo.png`}
                             width="25px"
