@@ -1,17 +1,8 @@
 import { Button, Flex, HStack, Text } from "@chakra-ui/react";
 import { Link } from "react-router";
+import type { Section as SectionType } from "../model/sectionItem";
 
-type Props = {
-    key: string;
-    title: string;
-    description: string;
-    mainButtonLabel?: string;
-    mainButtonLink?: string;
-    otherButtonLabel?: string;
-    otherButtonLink?: string;
-};
-
-export default function SectionTitle(prop: Props) {
+export default function SectionTitle(sectionTitle: SectionType) {
     return (
         <Flex direction="column" align="center">
             <Text
@@ -20,16 +11,16 @@ export default function SectionTitle(prop: Props) {
                 lineHeight="short"
                 textAlign="center"
             >
-                {prop.title}
+                {sectionTitle.title}
             </Text>
 
             <Text
                 fontSize={{ base: "lg", md: "2xl", lg: "3xl" }}
                 textAlign="center"
             >
-                {prop.description}
+                {sectionTitle.description}
             </Text>
-            {prop.mainButtonLabel && prop.otherButtonLabel ? (
+            {sectionTitle.mainButtonLabel && sectionTitle.otherButtonLabel ? (
                 <HStack marginTop={2}>
                     {}
                     <Button
@@ -37,8 +28,8 @@ export default function SectionTitle(prop: Props) {
                         variant="solid"
                         borderRadius={99}
                     >
-                        <Link to={prop.mainButtonLink ?? ""} color="white">
-                            {prop.mainButtonLabel}
+                        <Link to={sectionTitle.mainButtonLink ?? ""} color="white">
+                            {sectionTitle.mainButtonLabel}
                         </Link>
                     </Button>
                     <Button
@@ -46,8 +37,8 @@ export default function SectionTitle(prop: Props) {
                         variant="outline"
                         borderRadius={99}
                     >
-                        <Link to={prop.otherButtonLink ?? ""}>
-                            {prop.otherButtonLabel}
+                        <Link to={sectionTitle.otherButtonLink ?? ""}>
+                            {sectionTitle.otherButtonLabel}
                         </Link>
                     </Button>
                 </HStack>

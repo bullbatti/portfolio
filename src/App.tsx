@@ -1,19 +1,7 @@
 import { Stack } from "@chakra-ui/react";
-
 import Section from "./components/Section";
 import { useEffect, useState } from "react";
-
-type Prop = {
-    key: string;
-    id: string;
-    title: string;
-    description: string;
-    mainButtonLabel: string;
-    mainButtonLink: string;
-    otherButtonLabel: string;
-    otherButtonLink: string;
-    imageSrc: string;
-};
+import type { Section as SectionType } from "./model/sectionItem";
 
 export default function App() {
     const [data, setData] = useState([]);
@@ -32,7 +20,7 @@ export default function App() {
     return (
         <>
             <Stack gap={4}>
-                {data.map((section: Prop) => (
+                {data.map((section: SectionType) => (
                     <Section
                         key={section.key}
                         id={section.id}

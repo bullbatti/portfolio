@@ -10,24 +10,12 @@ import {
     VStack,
 } from "@chakra-ui/react";
 import SectionTitle from "./SectionTitle";
+import type { Section as SectionType } from "../model/sectionItem";
 
-type Prop = {
-    key: string;
-    id: string;
-    title: string;
-    description: string;
-    isProjectsSection: boolean;
-    mainButtonLabel: string;
-    mainButtonLink: string;
-    otherButtonLabel: string;
-    otherButtonLink: string;
-    imageSrc: string;
-};
-
-export default function Section(prop: Prop) {
+export default function Section(section: SectionType ) {
     return (
         <AspectRatio
-            id={prop.id}
+            id={section.id}
             bg="bg.muted"
             ratio={{ base: 9 / 16, md: 4 / 3, xl: 21 / 9 }}
             width="100%"
@@ -46,13 +34,13 @@ export default function Section(prop: Prop) {
                 >
                     <VStack width="100%" align="center" gap={2} flexShrink={0}>
                         <SectionTitle
-                        key={prop.key}
-                            title={prop.title}
-                            description={prop.description}
-                            mainButtonLabel={prop.mainButtonLabel}
-                            mainButtonLink={prop.mainButtonLink}
-                            otherButtonLabel={prop.otherButtonLabel}
-                            otherButtonLink={prop.otherButtonLink}
+                        key={section.key}
+                            title={section.title}
+                            description={section.description}
+                            mainButtonLabel={section.mainButtonLabel}
+                            mainButtonLink={section.mainButtonLink}
+                            otherButtonLabel={section.otherButtonLabel}
+                            otherButtonLink={section.otherButtonLink}
                         />
                     </VStack>
 
@@ -65,10 +53,10 @@ export default function Section(prop: Prop) {
                         alignItems="center"
                         justifyContent="flex-end"
                     >
-                        {!prop.isProjectsSection && prop.imageSrc && (
+                        {!section.isProjectsSection && section.imageSrc && (
                             <Image
-                                src={prop.imageSrc}
-                                alt={prop.title}
+                                src={section.imageSrc}
+                                alt={section.title}
                                 width="100%"
                                 maxH="100%"
                                 objectFit="contain"
@@ -77,7 +65,7 @@ export default function Section(prop: Prop) {
                         )}
 
                         {/* Badge + Marquee per la sezione progetti */}
-                        {prop.isProjectsSection && (
+                        {section.isProjectsSection && (
                             <VStack
                                 width="100%"
                                 align="center"

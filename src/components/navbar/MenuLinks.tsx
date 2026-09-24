@@ -1,5 +1,5 @@
 import { Github, Linkedin } from "@boxicons/react";
-import { Stack, Link, HStack } from "@chakra-ui/react";
+import { Stack, HStack, Link } from "@chakra-ui/react";
 
 const links = [
     { name: "Home", href: "/portfolio" },
@@ -24,10 +24,9 @@ export default function MenuLinks({ isMobile }: Props) {
                 <Link
                     key={link.name}
                     href={link.href}
-                    fontWeight={isMobile ? "bold" : "medium"}
-                    fontSize={isMobile ? "4xl" : "md"}
-                    outline="none"
-                    focusRing="none"
+                    style={{fontWeight: isMobile ? "bold" : "medium", fontSize: isMobile ? "4xl" : "md", outline: "none"}}
+                    
+                    
                 >
                     {link.name}
                 </Link>
@@ -37,8 +36,6 @@ export default function MenuLinks({ isMobile }: Props) {
                 <Link
                     href="https://github.com/bullbatti"
                     target="_blank"
-                    display="flex"
-                    alignItems="center"
                 >
                     <Github size={isMobile ? "lg" : undefined} />
                 </Link>
@@ -46,8 +43,6 @@ export default function MenuLinks({ isMobile }: Props) {
                 <Link
                     href="https://it.linkedin.com/in/battista-andrea"
                     target="_blank"
-                    display="flex"
-                    alignItems="center"
                 >
                     <Linkedin size={isMobile ? "lg" : undefined} />
                 </Link>
