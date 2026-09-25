@@ -8,6 +8,7 @@ import {
     Skeleton,
     Badge,
     VStack,
+    Center,
 } from "@chakra-ui/react";
 import SectionTitle from "./SectionTitle";
 import type { Section as SectionType } from "../model/sectionItem";
@@ -17,10 +18,11 @@ export default function Section(section: SectionType ) {
         <AspectRatio
             id={section.id}
             bg="bg.muted"
-            ratio={{ base: 9 / 16, md: 4 / 3, xl: 21 / 9 }}
+            ratio={{ base: 9 / 16, md: 4 / 3, xl: 21 / 9}}
             width="100%"
-        >
-            <Box width="100%" height="100%" position="relative">
+            >
+                <Center>
+            <Box width="100%" maxWidth="1440px" height="100%" position="relative">
                 <Flex
                     direction="column"
                     position="absolute"
@@ -31,7 +33,7 @@ export default function Section(section: SectionType ) {
                     height="100%"
                     width="100%"
                     overflow="hidden"
-                >
+                    >
                     <VStack width="100%" align="center" gap={2} flexShrink={0}>
                         <SectionTitle
                         key={section.key}
@@ -117,9 +119,12 @@ export default function Section(section: SectionType ) {
                                 </Marquee.Root>
                             </VStack>
                         )}
+
+                        {section.children}
                     </Box>
                 </Flex>
             </Box>
+            </Center>
         </AspectRatio>
     );
 }

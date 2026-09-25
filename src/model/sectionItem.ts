@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 export type Section = {
     key: string;
     id?: string;
@@ -9,4 +11,5 @@ export type Section = {
     otherButtonLink?: string;
     imageSrc?: string;
     isProjectsSection?: boolean;
+    children?: ReactNode
 }

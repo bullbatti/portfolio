@@ -1,10 +1,11 @@
 import { Github, Linkedin } from "@boxicons/react";
-import { Stack, HStack, Link } from "@chakra-ui/react";
+import { Stack, HStack } from "@chakra-ui/react";
+import { Link } from "react-router";
 
 const links = [
     { name: "Home", href: "/portfolio" },
     { name: "About", href: "/portfolio/about" },
-    { name: "Projects", href: "/portfolio/projects" },
+    { name: "Projects", href: "/projects" },
     { name: "Contact", href: "#contact" },
 ];
 
@@ -23,7 +24,7 @@ export default function MenuLinks({ isMobile }: Props) {
             {links.map((link) => (
                 <Link
                     key={link.name}
-                    href={link.href}
+                    to={link.href}
                     style={{fontWeight: isMobile ? "bold" : "medium", fontSize: isMobile ? "4xl" : "md", outline: "none"}}
                     
                     
@@ -34,14 +35,14 @@ export default function MenuLinks({ isMobile }: Props) {
 
             <HStack gap={{ base: "4", md: "8" }}>
                 <Link
-                    href="https://github.com/bullbatti"
+                    to="https://github.com/bullbatti"
                     target="_blank"
                 >
                     <Github size={isMobile ? "lg" : undefined} />
                 </Link>
 
                 <Link
-                    href="https://it.linkedin.com/in/battista-andrea"
+                    to="https://it.linkedin.com/in/battista-andrea"
                     target="_blank"
                 >
                     <Linkedin size={isMobile ? "lg" : undefined} />
