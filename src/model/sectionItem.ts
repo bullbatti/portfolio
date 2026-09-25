@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 
 export type Section = {
-    key: string;
+    slug: string;
     id?: string;
     title: string;
     description: string;

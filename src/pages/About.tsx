@@ -1,9 +1,9 @@
 import { Timeline, Stack, Flex, Text, Box, VStack } from "@chakra-ui/react";
-import SectionTitle from "./components/SectionTitle";
-import CustomTimelineItem from "./components/about/CustomTimelineItem";
+import SectionTitle from "../components/SectionTitle";
+import CustomTimelineItem from "../components/about/CustomTimelineItem";
 import { useState, useEffect } from "react";
-import type { TimeLineItem } from "./model/timeLineItem";
-import Section from "./components/Section";
+import type { TimeLineItem } from "../model/timeLineItem";
+import Section from "../components/Section";
 
 export default function About() {
     const [data, setData] = useState([]);
@@ -24,7 +24,7 @@ export default function About() {
             <Stack bg="bg.muted" paddingX={6} paddingY={8}>
                 <Box>
                     <Section
-                        key="1"
+                        slug="1"
                         id="whoami"
                         title="About me"
                         description="Chaos. Coffee. Code."
@@ -70,7 +70,7 @@ export default function About() {
                 id="my-journey"
             >
                 <SectionTitle
-                    key={"2"}
+                    slug={"2"}
                     title="My Journey"
                     description="Short but intense"
                 />

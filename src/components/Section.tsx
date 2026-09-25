@@ -36,7 +36,7 @@ export default function Section(section: SectionType ) {
                     >
                     <VStack width="100%" align="center" gap={2} flexShrink={0}>
                         <SectionTitle
-                        key={section.key}
+                        slug={section.slug + "title"}
                             title={section.title}
                             description={section.description}
                             mainButtonLabel={section.mainButtonLabel}

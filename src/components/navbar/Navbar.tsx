@@ -1,6 +1,7 @@
-import { Flex, Box, Image, Link } from "@chakra-ui/react";
+import { Flex, Box, Image } from "@chakra-ui/react";
 import MenuLinks from "./MenuLinks";
 import MobileDrawer from "./MobileDrawer";
+import { Link } from "react-router";
 
 export default function Navbar() {
     return (
@@ -13,19 +14,17 @@ export default function Navbar() {
             bg="#fff"
         >
             <Flex
-                as="nav"
-                gap={8}
-                bg="#fff"
-                align="center"
-                justify={{ base: "space-between", md: "center" }}
-                wrap="wrap"
-                px={{ base: 6, lg: 12 }}
-                py={3}
                 maxW={{ base: "full", xl: "1440px" }}
                 mx="auto"
+                px={{ base: 6, lg: 12 }}
+                py={3}
+                justify={{ base: "space-between", md: "center" }}
+                align="center"
+                gap={8}
+                wrap="wrap"
             >
                 <Box>
-                    <Link href="/portfolio#home" style={{display: "flex", alignItems: "center"}} >
+                    <Link to="/">
                         <Image
                             src={`${import.meta.env.BASE_URL}/logo.png`}
                             width="25px"
