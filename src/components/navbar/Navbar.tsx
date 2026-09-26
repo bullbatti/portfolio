@@ -2,8 +2,14 @@ import { Flex, Box, Image } from "@chakra-ui/react";
 import MenuLinks from "./MenuLinks";
 import MobileDrawer from "./MobileDrawer";
 import { Link } from "react-router";
+import { useColorModeValue } from "../ui/color-mode";
 
 export default function Navbar() {
+    const logoSrc = useColorModeValue(
+        `${import.meta.env.BASE_URL}/logo-light.png`,
+    `${import.meta.env.BASE_URL}/logo-dark.png`
+    )
+
     return (
         <Box
             position="sticky"
@@ -11,7 +17,7 @@ export default function Navbar() {
             left={0}
             zIndex={1000}
             width="100%"
-            bg="#fff"
+            bg="bg"
         >
             <Flex
                 maxW={{ base: "full", xl: "1440px" }}
@@ -26,7 +32,7 @@ export default function Navbar() {
                 <Box>
                     <Link to="/">
                         <Image
-                            src={`${import.meta.env.BASE_URL}/logo.png`}
+                            src={logoSrc}
                             width="25px"
                         ></Image>
                     </Link>

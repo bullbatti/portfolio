@@ -4,6 +4,7 @@ import { Link } from "react-router";
 import { useJson } from "../../hooks/useJson";
 import type { MenuLink } from "../../model/menuLink";
 import "./MenuLinks.css";
+import { ColorModeButton } from "../ui/color-mode";
 
 type Prop = {
     isMobile: boolean;
@@ -22,7 +23,7 @@ export default function MenuLinks({ isMobile }: Prop) {
         <Stack
             marginTop={isMobile ? "8" : "0"}
             direction={isMobile ? "column" : "row"}
-            alignItems={isMobile ? "flex-end" : "flex-start"}
+            alignItems={isMobile ? "flex-end" : "center"}
             gap={isMobile ? 12 : 8}
         >
             {data.map((link: MenuLink) => (
@@ -47,6 +48,8 @@ export default function MenuLinks({ isMobile }: Prop) {
                     <Linkedin size={isMobile ? "lg" : undefined} />
                 </Link>
             </HStack>
+
+            <ColorModeButton position={isMobile ? "absolute" : ""} bottom={isMobile ? "8" : ""}/>
         </Stack>
     );
 }
