@@ -26,7 +26,10 @@ export default function SectionTitle(sectionTitle: SectionTitleProps) {
                 <HStack marginTop={2}>
                     {sectionTitle.mainButtonLabel ? (
                         <Link
-                            to={{pathname: sectionTitle.mainButtonLink ?? "", hash: sectionTitle.mainLinkHash ?? ""}}
+                            to={{
+                                pathname: sectionTitle.mainButtonLink ?? "",
+                                hash: sectionTitle.mainLinkHash ?? "",
+                            }}
                             color="white"
                         >
                             <Button
@@ -40,7 +43,12 @@ export default function SectionTitle(sectionTitle: SectionTitleProps) {
                     ) : null}
 
                     {sectionTitle.otherButtonLabel ? (
-                        <Link to={{pathname: sectionTitle.otherButtonLink ?? "", hash: sectionTitle.otherLinkHash ?? ""}}>
+                        <Link
+                            to={{
+                                pathname: sectionTitle.otherButtonLink ?? "",
+                                hash: sectionTitle.otherLinkHash ?? "",
+                            }}
+                        >
                             <Button
                                 colorPalette="blue"
                                 variant="outline"
