@@ -1,6 +1,5 @@
 [
     {
-        "key": "10",
         "id": "home",
         "title": "Andrea Battista",
         "description": "Full Stack Developer",
@@ -11,25 +10,25 @@
         "imageSrc": "/assets/home.png"
     },
     {
-        "key": "20",
         "id": "about",
         "title": "About me",
         "description": "Chaos. Coffee. Code.",
         "mainButtonLabel": "Learn more",
         "mainButtonLink": "/about",
         "otherButtonLabel": "My journey",
-        "otherButtonLink": "/about/#my-journey",
+        "otherButtonLink": "/about",
+        "otherLinkHash": "my-journey",
         "imageSrc": "/assets/about.png"
     },
     {
-        "key": "30",
         "id": "projects",
         "title": "Projects",
         "description": "Limited scope. Patient focus.",
         "mainButtonLabel": "Contact",
-        "mainButtonLink": "#contact",
+        "mainButtonLink": "/contact",
         "otherButtonLabel": "Who am I",
-        "otherButtonLink": "#about",
+        "otherButtonLink": "/about",
+        "otherLinkHash": "#my-journey",
         "imageSrc": ""
     }
 ]
