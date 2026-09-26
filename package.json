@@ -10,7 +10,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "typegen": "npx @chakra-ui/cli typegen ./src/theme.ts"
   },
   "dependencies": {
     "@boxicons/react": "^1.0.3",

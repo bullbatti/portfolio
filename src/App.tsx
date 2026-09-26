@@ -3,10 +3,12 @@ import Navbar from "./components/navbar/Navbar";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import Home from "./pages/Home";
+import Scroll from "./services/scroll";
 
 export default function App() {
     return (
         <>
+        <Scroll />
             <Navbar />
 
             <Routes>

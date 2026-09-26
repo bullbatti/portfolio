@@ -3,6 +3,7 @@ import { Stack, HStack } from "@chakra-ui/react";
 import { Link } from "react-router";
 import { useJson } from "../../hooks/useJson";
 import type { MenuLink } from "../../model/menuLink";
+import "./MenuLinks.css";
 
 type Prop = {
     isMobile: boolean;
@@ -10,27 +11,25 @@ type Prop = {
 
 export default function MenuLinks({ isMobile }: Prop) {
     const { data, loading, error } = useJson<MenuLink>("links.json");
-    
-    if (loading)
-        return <p>Loading…</p>;
 
-    if (error) 
-        return <p>Error: {error.message}</p>;
+    if (loading) return <p>Loading…</p>;
 
-    if (!data)
-        return null;
+    if (error) return <p>Error: {error.message}</p>;
+
+    if (!data) return null;
 
     return (
         <Stack
             marginTop={isMobile ? "8" : "0"}
             direction={isMobile ? "column" : "row"}
             alignItems={isMobile ? "flex-end" : "flex-start"}
-            gap={8}
+            gap={isMobile ? 12 : 8}
         >
             {data.map((link: MenuLink) => (
                 <Link
-                    key={link.key}
+                    key={link.id}
                     to={link.href}
+                    className={isMobile ? "drawer-link" : ""}
                 >
                     {link.name}
                 </Link>

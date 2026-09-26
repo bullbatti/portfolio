@@ -1,10 +1,9 @@
 import { Stack } from "@chakra-ui/react";
-import Section from "../components/Section";
-import type { Section as SectionType } from "../model/sectionItem";
+import Section, { type SectionProps } from "../components/common/Section";
 import { useJson } from "../hooks/useJson";
 
 export default function Home() {
-    const { data, loading, error } = useJson<SectionType>("sections.json");
+    const { data, loading, error } = useJson<SectionProps>("sections.json");
 
     if (loading) return <p>Loading…</p>;
 
@@ -14,18 +13,21 @@ export default function Home() {
 
     return (
         <Stack gap={4} justifyContent="center" alignItems="center">
-            {data.map((section: SectionType) => (
+            {data.map((section: SectionProps, index: number) => (
                 <Section
-                    slug={section.slug}
+                    key={`${section.id}-${index}`}
                     id={section.id}
                     title={section.title}
                     description={section.description}
-                    isProjectsSection={section.slug === "3"}
+                    isProjectsSection={section.id === "projects"}
                     mainButtonLabel={section.mainButtonLabel}
                     mainButtonLink={section.mainButtonLink}
+                    mainLinkHash={section.mainLinkHash}
                     otherButtonLabel={section.otherButtonLabel}
                     otherButtonLink={section.otherButtonLink}
+                    otherLinkHash={section.otherLinkHash}
                     imageSrc={`${import.meta.env.BASE_URL}${section.imageSrc}`}
+                    variableHeight={false}
                 />
             ))}
         </Stack>
