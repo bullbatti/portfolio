@@ -1,7 +1,7 @@
 {
   "name": "Batefolio",
   "short_name": "Batefolio",
-  "start_url": "/",
+  "start_url": "/portfolio",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
