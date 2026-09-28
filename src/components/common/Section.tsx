@@ -13,6 +13,8 @@ import {
 } from "@chakra-ui/react";
 import SectionTitle from "./SectionTitle";
 import type { SectionData } from "../../types/SectionData";
+import { useJson } from "../../hooks/useJson";
+import type { Project } from "../../types/Project";
 
 export interface SectionProps extends SectionData {
     imageSrc?: string;
@@ -22,6 +24,14 @@ export interface SectionProps extends SectionData {
 }
 
 export default function Section(section: SectionProps) {
+    const { data, loading, error } = useJson<Project>("projects.json");
+
+    if (loading) return <p>Loading…</p>;
+
+    if (error) return <p>Error: {error.message}</p>;
+
+    if (!data) return null;
+
     const content = (
         <Box
             width="100%"
@@ -97,16 +107,26 @@ export default function Section(section: SectionProps) {
                             >
                                 <Marquee.Viewport>
                                     <Marquee.Content>
-                                        {Array.from({ length: 4 }).map(
-                                            (_, i) => (
-                                                <Marquee.Item key={i}>
+                                        {data.map((project: Project) => (
+                                            <Marquee.Item key={project.id}>
+                                                {project.srcUrl !== "" ? (
+                                                    <Center
+                                                        width="300px"
+                                                        height="200px"
+                                                    >
+                                                        <Image
+                                                            src={project.srcUrl}
+                                                            width="10rem"
+                                                        />
+                                                    </Center>
+                                                ) : (
                                                     <Skeleton
                                                         height="200px"
                                                         width="300px"
                                                     />
-                                                </Marquee.Item>
-                                            ),
-                                        )}
+                                                )}
+                                            </Marquee.Item>
+                                        ))}
                                     </Marquee.Content>
                                 </Marquee.Viewport>
                             </Marquee.Root>

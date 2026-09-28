@@ -49,7 +49,10 @@ export default function MenuLinks({ isMobile }: Prop) {
                 </Link>
             </HStack>
 
-            <ColorModeButton position={isMobile ? "absolute" : ""} bottom={isMobile ? "8" : ""}/>
+            <ColorModeButton
+                position={isMobile ? "absolute" : ""}
+                bottom={isMobile ? "8" : ""}
+            />
         </Stack>
     );
 }

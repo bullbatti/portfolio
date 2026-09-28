@@ -3,13 +3,12 @@
     <head>
         <meta charset="UTF-8" />
 
-        <link rel="icon" href="logo-light.png" id="favicon">
+        <link rel="icon" href="logo-light.png" id="favicon" />
         <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-
         <link rel="manifest" href="manifest.webmanifest" />
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Andrea Battista</title>
+        <title>Andrea Battista - Portfolio</title>
 
         <!-- Basic Icons -->
         <link
@@ -27,6 +26,7 @@
             rel="stylesheet"
         />
 
+        <!-- Favicon manager based on theme -->
         <script>
             (function () {
                 const favicon = document.getElementById("favicon");
@@ -48,6 +48,7 @@
     <body>
         <div id="root"></div>
 
+        <!-- Redirect for github pages -->
         <script>
             (function (l) {
                 if (l.search[1] === "/") {
@@ -58,6 +59,7 @@
                             return s.replace(/~and~/g, "&");
                         })
                         .join("?");
+                        
                     window.history.replaceState(
                         null,
                         "",

@@ -10,8 +10,8 @@ export default defineConfig({
             registerType: "autoUpdate",
             includeAssets: ["apple-touch-icon.png", "favicon.ico"],
             manifest: {
-                name: "La Mia App",
-                short_name: "App",
+                name: "portfolio",
+                short_name: "portfolio",
                 icons: [
                     {
                         src: "/portfolio/icons/icon-192.png",

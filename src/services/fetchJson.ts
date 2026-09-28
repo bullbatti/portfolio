@@ -4,7 +4,9 @@ export async function fetchJson<T>(filename: string): Promise<T[]> {
     const response = await fetch(url);
 
     if (!response.ok)
-        throw new Error(`Failed to fetch ${url}: ${response.status} ${response.statusText}`);
+        throw new Error(
+            `Failed to fetch ${url}: ${response.status} ${response.statusText}`,
+        );
 
     const data = (await response.json()) as T[];
 

@@ -7,8 +7,8 @@ import { useColorModeValue } from "../ui/color-mode";
 export default function Navbar() {
     const logoSrc = useColorModeValue(
         `${import.meta.env.BASE_URL}/logo-light.png`,
-    `${import.meta.env.BASE_URL}/logo-dark.png`
-    )
+        `${import.meta.env.BASE_URL}/logo-dark.png`,
+    );
 
     return (
         <Box
@@ -31,10 +31,7 @@ export default function Navbar() {
             >
                 <Box>
                     <Link to="/">
-                        <Image
-                            src={logoSrc}
-                            width="25px"
-                        ></Image>
+                        <Image src={logoSrc} width="25px"></Image>
                     </Link>
                 </Box>
 
