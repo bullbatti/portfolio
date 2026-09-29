@@ -141,7 +141,13 @@ export default function Section(section: SectionProps) {
 
     if (section.variableHeight) {
         return (
-            <Center id={section.id} bg="bg.muted" width="100%">
+            <Center
+                id={section.id}
+                bg="bg.muted"
+                width="100%"
+                minHeight="calc(100dvh - 60px)"
+                alignItems="flex-start"
+            >
                 {content}
             </Center>
         );
