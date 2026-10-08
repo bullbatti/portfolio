@@ -75,12 +75,14 @@ export default function Section(section: SectionProps) {
                 >
                     {!section.isProjectsSection && section.imageSrc && (
                         <Image
+                            rel="preload"
                             src={section.imageSrc}
                             alt={section.title}
                             width="100%"
                             maxH="100%"
                             objectFit="contain"
                             display="block"
+                            fetchPriority="high"
                         />
                     )}
 
